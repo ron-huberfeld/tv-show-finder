@@ -9,6 +9,7 @@
     <link rel="stylesheet" href="https://stackpath.bootstrapcdn.com/bootstrap/5.0.0-alpha2/css/bootstrap.min.css"
         integrity="sha384-DhY6onE6f3zzKbjUPRc2hOzGAdEf4/Dz+WJwBvEYL/lkkIsI3ihufq9hk9K4lVoK" crossorigin="anonymous">
     <link rel="stylesheet" href="style.css">
+    <link rel="icon" href="images/bazinga.png" />
 
     <title>TV Show Finder</title>
 </head>
@@ -19,24 +20,27 @@
         <nav>
             <form>
                 <div class="row">
-                    <div class="col">
+                    <div class="col left">
                         <img class="img-fluid" src="images/bazinga.png" alt="bazinga">
                     </div>
-                    <div class="col dropdown">
-                        <button class="btn dropdown-toggle" type="button" id="dropdownMenuButton" data-toggle="dropdown"
-                            aria-expanded="false">
-                            Search Category
-                        </button>
-                        <ul class="dropdown-menu" aria-labelledby="dropdownMenuButton">
-                            <li><a class="dropdown-item" href="#">Name</a></li>
-                            <li><a class="dropdown-item" href="#">Genre</a></li>
-                        </ul>
+                    <div class="col middle">
+
+                        <div class="dropdown">
+                            <button class="btn dropdown-toggle" type="button" id="dropdownMenuButton"
+                                data-toggle="dropdown" aria-expanded="false">
+                                Search Category
+                            </button>
+                            <ul class="dropdown-menu" aria-labelledby="dropdownMenuButton">
+                                <li><a class="dropdown-item" href="#">Name</a></li>
+                                <li><a class="dropdown-item" href="#">Genre</a></li>
+                            </ul>
+                        </div>
+                        <div class="">
+                            <input type="text" class="form-control" placeholder="Name" aria-label="Name">
+                        </div>
+                        <button type="submit" class="col btn btn-primary">Submit</button>
                     </div>
-                    <div class="col">
-                        <input type="text" class="form-control" placeholder="Last name" aria-label="Last name">
-                    </div>
-                    <button type="submit" class="col btn btn-primary">Submit</button>
-                    <div class="col">
+                    <div class="col right">
                         <svg width="2em" height="2em" viewBox="0 0 16 16" class="bi bi-house-fill" fill="currentColor"
                             xmlns="http://www.w3.org/2000/svg">
                             <path fill-rule="evenodd"
@@ -44,8 +48,6 @@
                             <path fill-rule="evenodd"
                                 d="M7.293 1.5a1 1 0 0 1 1.414 0l6.647 6.646a.5.5 0 0 1-.708.708L8 2.207 1.354 8.854a.5.5 0 1 1-.708-.708L7.293 1.5z" />
                         </svg>
-                    </div>
-                    <div class="col">
                         <svg width="2em" height="2em" viewBox="0 0 16 16" class="bi bi-person-circle"
                             fill="currentColor" xmlns="http://www.w3.org/2000/svg">
                             <path
