@@ -1,12 +1,79 @@
 <!DOCTYPE html>
 <html lang="en">
+
 <head>
     <meta charset="UTF-8">
     <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <!-- Bootstrap CSS -->
+    <link rel="stylesheet" href="https://stackpath.bootstrapcdn.com/bootstrap/5.0.0-alpha2/css/bootstrap.min.css"
+        integrity="sha384-DhY6onE6f3zzKbjUPRc2hOzGAdEf4/Dz+WJwBvEYL/lkkIsI3ihufq9hk9K4lVoK" crossorigin="anonymous">
+    <link href="https://unpkg.com/tailwindcss@^1.0/dist/tailwind.min.css" rel="stylesheet">
     <link rel="icon" href="images/bazinga.png" />
+    <script src="https://kit.fontawesome.com/19ee417ec0.js" crossorigin="anonymous"></script>
+    <link rel="stylesheet" href="style.css">
+
     <title>Shows</title>
+    <script>let shows = [{
+            "name": "Under the Dome",
+            "rating": { "average": 6.5 },
+            "image": {
+                "medium": "http://static.tvmaze.com/uploads/images/medium_portrait/81/202627.jpg",
+                "original": "http://static.tvmaze.com/uploads/images/original_untouched/81/202627.jpg"
+            },
+            "summary": "<p><b>Under the Dome</b> is the story of a small town that is suddenly and inexplicably sealed off from the rest of the world by an enormous transparent dome. The town's inhabitants must deal with surviving the post-apocalyptic conditions while searching for answers about the dome, where it came from and if and when it will go away.</p>",
+        },
+        {
+            "name": "fake",
+            "rating": { "average": 10 },
+            "image": {
+                "medium": "images/defaultAvatar.png",
+                "original": "images/defaultAvatar.png"
+            },
+            "summary": "<p><b>fake</b> fakefakefakefakefakefakefake.</p>",
+        }]</script>
 </head>
+
 <body>
-    <h1>Not implemented</h1>
+    <div class="relative overflow-hidden">
+        <div class="max-w-screen-xl mx-auto">
+            <div class="relative pt-6 px-4 sm:px-6 lg:px-8">
+                <nav class="navbar navbar-expand-md navbar-light">
+                    <div class="navbar-brand">
+                        <a href="index.html" aria-label="Home">
+                            <img class="h-8 w-auto sm:h-10" src="images/bazinga.png" alt="Logo">
+                        </a>
+                    </div>
+                </nav>
+            </div>
+        </div>
+    </div>
+
+    <main class="flex flex-col">
+        {% for show in shows %}
+        <div class="card mb-3 m-2">
+            <div class="p-3 rounded shadow-lg bg-white">
+                <div class="flex">
+                    <div class="w-24">
+                        <img src="images/defaultAvatar.png" alt="Show Image" />
+                    </div>
+
+                    <div>
+                        <p class="font-bold uppercase text-lg">
+                            {{ show.name }}
+                        </p>
+
+                        <div class="mt-2">
+                            <p class="mt-2 font-bold text-gray-500 text-xs">{{ show.details }}</p>
+                            <p class="text-gray-500 italic">This is a wider card with supporting text below as a natural
+                                lead-in to
+                                additional content. This content is a little bit longer.</p>
+                        </div>
+                    </div>
+                </div>
+            </div>
+        </div>
+        {% endfor %}
+    </main>
 </body>
+
 </html>
