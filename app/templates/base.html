@@ -1,0 +1,36 @@
+<!DOCTYPE html>
+<html lang="en">
+
+<head>
+  <meta charset="UTF-8">
+  <meta name="viewport" content="width=device-width, initial-scale=1.0">
+
+  <!-- Bootstrap CSS -->
+  <link rel="stylesheet" href="https://stackpath.bootstrapcdn.com/bootstrap/5.0.0-alpha2/css/bootstrap.min.css"
+    integrity="sha384-DhY6onE6f3zzKbjUPRc2hOzGAdEf4/Dz+WJwBvEYL/lkkIsI3ihufq9hk9K4lVoK" crossorigin="anonymous">
+  <!-- Tailwind CSS -->
+  <link href="https://unpkg.com/tailwindcss@1.9.5/dist/tailwind.min.css" rel="stylesheet">
+  <!-- Font awesome icons -->
+  <script src="https://kit.fontawesome.com/19ee417ec0.js" crossorigin="anonymous"></script>
+  <link rel="icon" href="{{ url_for('static', filename='images/bazinga.png') }}" />
+  <link rel="stylesheet" type="text/css" href="{{ url_for('static', filename='styles/style.css') }}">
+
+  {% if title %}
+  <title>Bazinga - {{ title }}</title>
+  {% else %}
+  <title>Bazinga Show Finder</title>
+  {% endif %}
+</head>
+
+<body>
+  <div class="bg-gradient2 h-1"></div>
+  <div class="relative overflow-hidden">
+    {% block content %}{% endblock %}
+
+    <script src="https://stackpath.bootstrapcdn.com/bootstrap/5.0.0-alpha2/js/bootstrap.bundle.min.js"
+      integrity="sha384-BOsAfwzjNJHrJ8cZidOg56tcQWfp6y72vEJ8xQ9w6Quywb24iOsW913URv1IS4GD"
+      crossorigin="anonymous"></script>
+  </div>
+</body>
+
+</html>

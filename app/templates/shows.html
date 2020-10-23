@@ -1,0 +1,43 @@
+{% extends "base.html" %}
+
+{% block content %}
+<div class="relative overflow-hidden">
+    <div class="max-w-screen-xl mx-auto">
+        <div class="relative pt-6 px-4 sm:px-6 lg:px-8">
+            <nav class="navbar navbar-expand-md navbar-light">
+                <div class="navbar-brand">
+                    <a href="{{ url_for('index') }}" aria-label="Home">
+                        <img class="h-8 w-auto sm:h-10" src="{{ url_for('static', filename='images/bazinga.png') }}"
+                            alt="Logo">
+                    </a>
+                </div>
+            </nav>
+        </div>
+    </div>
+</div>
+
+<main class="flex flex-col">
+    <div class="card mb-3 m-2">
+        <div class="p-3 rounded shadow-lg bg-white">
+            <div class="flex">
+                <div class="w-24">
+                    <img src="{{ url_for('static', filename='images/defaultAvatar.png') }}" alt="Show Image" />
+                </div>
+
+                <div>
+                    <p class="font-bold uppercase text-lg">
+                        Name display
+                    </p>
+
+                    <div class="mt-2">
+                        <p class="mt-2 font-bold text-gray-500 text-xs">Details display</p>
+                        <p class="text-gray-500 italic">This is a wider card with supporting text below as a natural
+                            lead-in to
+                            additional content. This content is a little bit longer.</p>
+                    </div>
+                </div>
+            </div>
+        </div>
+    </div>
+</main>
+{% endblock %}
