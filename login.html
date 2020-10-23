@@ -4,12 +4,15 @@
 <head>
     <meta charset="UTF-8">
     <meta name="viewport" content="width=device-width, initial-scale=1.0">
+
     <!-- Bootstrap CSS -->
     <link rel="stylesheet" href="https://stackpath.bootstrapcdn.com/bootstrap/5.0.0-alpha2/css/bootstrap.min.css"
         integrity="sha384-DhY6onE6f3zzKbjUPRc2hOzGAdEf4/Dz+WJwBvEYL/lkkIsI3ihufq9hk9K4lVoK" crossorigin="anonymous">
-    <link href="https://unpkg.com/tailwindcss@^1.0/dist/tailwind.min.css" rel="stylesheet">
-    <link rel="icon" href="images/bazinga.png" />
+    <!-- Tailwind CSS -->
+    <link href="https://unpkg.com/tailwindcss@1.9.5/dist/tailwind.min.css" rel="stylesheet">
+    <!-- Font awesome icons -->
     <script src="https://kit.fontawesome.com/19ee417ec0.js" crossorigin="anonymous"></script>
+    <link rel="icon" href="images/bazinga.png" />
     <link rel="stylesheet" href="style.css">
 
     <title>Login</title>
@@ -17,7 +20,7 @@
 
 <body>
     <section class="w-full sm:w-1/2 h-screen m-auto p-8 sm:pt-10">
-        <div class="bg-gradient2 h-1" />
+        <div class="bg-gradient2 h-1"></div>
         <div class="p-3 rounded shadow-lg">
             <div class="flex items-center justify-center py-12 px-4 sm:px-6 lg:px-8">
                 <div class="max-w-md w-full">
@@ -39,7 +42,7 @@
                         <div>
                             <div class="mb-2">
                                 <div class="mb-1">
-                                    <Label text="Email" />
+                                    <label class="text-sm font-semibold text-gray-700">Email</label>
                                 </div>
                                 <input
                                     class="appearance-none rounded-none relative block w-full px-3 py-2 border border-gray-300 placeholder-gray-500 text-gray-900 rounded-md focus:outline-none focus:shadow-outline-blue focus:border-blue-300 focus:z-10 sm:text-sm sm:leading-5"
@@ -47,7 +50,7 @@
                             </div>
                             <div>
                                 <div class="mb-1">
-                                    <Label text="Password" />
+                                    <label class="text-sm font-semibold text-gray-700">Password</label>
                                 </div>
                                 <input
                                     class="appearance-none rounded-none relative block w-full px-3 py-2 border border-gray-300 placeholder-gray-500 text-gray-900 rounded-md focus:outline-none focus:shadow-outline-blue focus:border-blue-300 focus:z-10 sm:text-sm sm:leading-5"
