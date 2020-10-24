@@ -1,4 +1,4 @@
-{% extends "base.html" %}
+{% extends "base.j2" %}
 
 {% block content %}
 <div class="relative overflow-hidden">
@@ -27,7 +27,7 @@
 
 <main class="flex flex-col">
     {% for show in shows %}
-    {% include 'show.html' %}
+    {% include 'show.j2' %}
     {% endfor %}
 </main>
 {% endblock %}

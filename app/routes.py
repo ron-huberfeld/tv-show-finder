@@ -7,7 +7,7 @@ import requests
 @app.route('/')
 @app.route('/index')
 def index():
-    return render_template('index.html', title='Show Finder')
+    return render_template('index.j2', title='Show Finder')
 
 
 @app.route('/login', methods=['GET', 'POST'])
@@ -16,20 +16,20 @@ def login():
     if form.validate_on_submit():
         flash('{} is logged in'.format(form.email.data))
         return redirect(url_for('shows'))
-    return render_template('login.html', title='Sign In', form=form)
+    return render_template('login.j2', title='Sign In', form=form)
 
 
 @app.route('/register')
 def register():
-    return render_template('register.html', title='Sign Up')
+    return render_template('register.j2', title='Sign Up')
 
 
 @app.route('/password_review')
 def password_review():
-    return render_template('forgot-password.html', title='Password review')
+    return render_template('forgot-password.j2', title='Password review')
 
 
 @app.route('/shows')
 def shows():
     response = requests.get('http://api.tvmaze.com/shows').json()
-    return render_template('shows.html', title='Shows', shows=response)
+    return render_template('shows.j2', title='Shows', shows=response)

@@ -1,4 +1,4 @@
-{% extends "base.html" %}
+{% extends "base.j2" %}
 
 {% block content %}
 <section class="w-full sm:w-1/2 h-screen m-auto p-8 sm:pt-10">
@@ -21,7 +21,7 @@
                         class="font-medium text-blue-600 hover:text-blue-500 focus:outline-none focus:underline transition ease-in-out duration-150">Login
                         now</a>
                 </p>
-                <form class="mt-8" action="register.html" method="POST">
+                <form class="mt-8" action="register.j2" method="POST">
                     <div>
                         <div class="flex">
                             <div class="mb-2 mr-2 w-1/2">
