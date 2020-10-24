@@ -1,0 +1,5 @@
+# Heroku link
+https://bazinga-tv-show.herokuapp.com/
+
+# Github
+https://github.com/ron-huberfeld/tv-show-finder
