@@ -6,8 +6,22 @@
   );
 }
 
-h2, p {
+h2,
+p {
   display: flex;
   align-items: center;
   justify-content: space-around;
+}
+
+#inner:hover {
+  cursor: pointer;
+  background: linear-gradient(
+    135deg,
+    rgba(0, 97, 215, 1) 0%,
+    rgba(0, 200, 255, 1) 100%
+  );
+}
+
+#inner {
+  transition: background 0.2s ease, padding 0.8s linear;
 }

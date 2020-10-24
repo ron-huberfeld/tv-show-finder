@@ -11,33 +11,23 @@
                             alt="Logo">
                     </a>
                 </div>
+                {% with messages = get_flashed_messages() %}
+                {% if messages %}
+                <ul class="navbar-nav mr-auto mb-2 mb-lg-0 ">
+                    {% for message in messages %}
+                    <li class="nav-item">{{ message }}</li>
+                    {% endfor %}
+                </ul>
+                {% endif %}
+                {% endwith %}
             </nav>
         </div>
     </div>
 </div>
 
 <main class="flex flex-col">
-    <div class="card mb-3 m-2">
-        <div class="p-3 rounded shadow-lg bg-white">
-            <div class="flex">
-                <div class="w-24">
-                    <img src="{{ url_for('static', filename='images/defaultAvatar.png') }}" alt="Show Image" />
-                </div>
-
-                <div>
-                    <p class="font-bold uppercase text-lg">
-                        Name display
-                    </p>
-
-                    <div class="mt-2">
-                        <p class="mt-2 font-bold text-gray-500 text-xs">Details display</p>
-                        <p class="text-gray-500 italic">This is a wider card with supporting text below as a natural
-                            lead-in to
-                            additional content. This content is a little bit longer.</p>
-                    </div>
-                </div>
-            </div>
-        </div>
-    </div>
+    {% for show in shows %}
+    {% include 'show.html' %}
+    {% endfor %}
 </main>
 {% endblock %}

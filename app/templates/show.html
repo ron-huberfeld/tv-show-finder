@@ -1,0 +1,19 @@
+<div class="mb-3 m-2">
+    <div class="flex p-3 rounded shadow-lg bg-white" id="inner">
+        <div class="w-24 mr-6">
+            <img class="rounded mx-auto" src="{{ show.image.original }}" alt="Show Image" />
+        </div>
+
+        <div class="text-center">
+            <h5 class="font-bold text-lg">
+                {{ show.name }}
+            </h5>
+
+            <div class="mt-2">
+                <p class="text-gray-500">Genres: {{ show.genres|join(',') }}</p>
+                <p class="text-gray-500 italic">Rating: {{ show.rating.average }}</p>
+                <a class="text-blue-500" href="{{ show.officialSite }}">Link to official site</a>
+            </div>
+        </div>
+    </div>
+</div>

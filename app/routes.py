@@ -1,6 +1,7 @@
-from flask import render_template
+from flask import render_template, flash, redirect, url_for
 from app import app
 from app.forms import LoginForm
+import requests
 
 
 @app.route('/')
@@ -9,15 +10,17 @@ def index():
     return render_template('index.html', title='Show Finder')
 
 
-@app.route('/login')
+@app.route('/login', methods=['GET', 'POST'])
 def login():
-    # form = LoginForm()
-    return render_template('login.html', title='Sign In')
+    form = LoginForm()
+    if form.validate_on_submit():
+        flash('{} is logged in'.format(form.email.data))
+        return redirect(url_for('shows'))
+    return render_template('login.html', title='Sign In', form=form)
 
 
 @app.route('/register')
 def register():
-    # form = LoginForm()
     return render_template('register.html', title='Sign Up')
 
 
@@ -28,4 +31,5 @@ def password_review():
 
 @app.route('/shows')
 def shows():
-    return render_template('shows.html', title='Shows')
+    response = requests.get('http://api.tvmaze.com/shows').json()
+    return render_template('shows.html', title='Shows', shows=response)
